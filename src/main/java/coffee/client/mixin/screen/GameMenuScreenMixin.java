@@ -41,19 +41,7 @@ public class GameMenuScreenMixin extends Screen {
         }));
         addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 30, 60, 20, "编辑HUD", () -> client.setScreen(new HudEditorScreen())));
         addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 55, 60, 20, "路径点", () -> client.setScreen(new WaypointEditScreen())));
-        //addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 80, 60, 20, "B站@金桔猪", () -> System.out.println("https://space.bilibili.com/156751467")));
-    }
-
-    @Inject(method = "init", at = @At("RETURN"))
-    void coffee_postInit(CallbackInfo ci) {
-        RoundButton nbtEdit = new RoundButton(RoundButton.STANDARD, 5, 80, 64, 20, "B站@金桔猪", () -> {
-            if (CoffeeMain.client.player.getInventory().getMainHandStack().isEmpty()) {
-                Utils.Logging.error("You need to hold an item!");
-            } else {
-                CoffeeMain.client.setScreen(new NbtEditorScreen(CoffeeMain.client.player.getInventory().getMainHandStack()));
-            }
-        });
-        addDrawableChild(nbtEdit);
+        addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 80, 60, 20, "B站@金桔猪", () -> System.out.println("https://space.bilibili.com/156751467")));
     }
 
     @ModifyArg(method = "method_19845", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;setScreen(Lnet/minecraft/client/gui/screen/Screen;)V"), index = 0)
