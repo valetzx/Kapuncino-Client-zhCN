@@ -84,7 +84,7 @@ public class AddonManagerScreen extends ClientScreen implements FastTickable {
     @Override
     protected void init() {
         reInitViewers();
-        RoundButton openFolder = new RoundButton(RoundButton.STANDARD, 5, 5, 100, 20, "Open folder", () -> Util.getOperatingSystem().open(AddonManager.ADDON_DIRECTORY));
+        RoundButton openFolder = new RoundButton(RoundButton.STANDARD, 5, 5, 100, 20, "打开文件夹", () -> Util.getOperatingSystem().open(AddonManager.ADDON_DIRECTORY));
         this.addDrawableChild(openFolder);
     }
 
@@ -115,7 +115,7 @@ public class AddonManagerScreen extends ClientScreen implements FastTickable {
             RendererFontAdapter customSize = FontRenderers.getCustomSize(40);
             RendererFontAdapter customSize1 = FontRenderers.getCustomSize(30);
             customSize.drawCenteredString(stack, "No addons", width / 2d, height / 2d - customSize.getFontHeight(), 0xAAAAAA);
-            customSize1.drawCenteredString(stack, "Drag some in to load them", width / 2d, height / 2d, 0xAAAAAA);
+            customSize1.drawCenteredString(stack, "拖一些进来加载它们", width / 2d, height / 2d, 0xAAAAAA);
         }
         for (AddonViewer addonViewer : new ArrayList<>(viewerList)) {
             addonViewer.render(stack, xRoot, yRoot + yOffset + scroller.getScroll(), mouseX, mouseY);

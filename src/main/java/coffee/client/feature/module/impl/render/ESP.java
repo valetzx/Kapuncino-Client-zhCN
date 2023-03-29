@@ -41,20 +41,20 @@ import java.util.List;
 public class ESP extends Module {
     static DumpVertexProvider provider;
     final DoubleSetting range = this.config.create(new DoubleSetting.Builder(64).name("Range")
-        .description("How far to render the entities")
+        .description("渲染实体到什么程度")
         .min(32)
         .max(128)
         .precision(1)
         .get());
-    @Setting(name = "Outline mode", description = "How to render the outline")
+    @Setting(name = "Outline mode", description = "如何渲染轮廓")
     public Mode outlineMode = Mode.Shader;
-    @Setting(name = "Rect mode", description = "How to render the rect outline")
+    @Setting(name = "Rect mode", description = "如何绘制矩形轮廓")
     ShaderMode shaderMode = ShaderMode.Simple;
-    @Setting(name = "Entity filter", description = "Which entities to show")
+    @Setting(name = "实体过滤器", description = "要显示哪些实体")
     ListSetting.FlagSet<AttackFilter> attackFilter = new ListSetting.FlagSet<>(AttackFilter.Hostile, AttackFilter.Players);
 
     public ESP() {
-        super("ESP", "Shows where entities are", ModuleType.RENDER);
+        super("ESP", "显示实体的位置", ModuleType.RENDER);
     }
 
     @VisibilitySpecifier("Rect mode")

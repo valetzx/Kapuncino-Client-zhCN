@@ -56,7 +56,7 @@ public abstract class Module {
                 hasAnnotation = true;
             }
         }
-        this.toasts = this.config.create(new BooleanSetting.Builder(!hasAnnotation).name("Toasts").description("是否显示启用/禁用的提示").get());
+        this.toasts = this.config.create(new BooleanSetting.Builder(!hasAnnotation).name("提示框").description("是否显示启用/禁用的提示").get());
     }
 
     public final void postModuleInit() {
@@ -114,12 +114,12 @@ public abstract class Module {
         }
         this.enabled = enabled;
         if (toasts.getValue()) {
-            String s = (this.enabled ? "§aEn" : "§cDis") + "abled §r" + this.getName();
+            String s = (this.enabled ? "§a启动" : "§c禁用") + "  §r" + this.getName();
             if (ModuleRegistry.getByClass(ClientSettings.class).toggleStyle == ClientSettings.ToggleMode.Chat) {
                 Utils.Logging.removeMessage(lastNotification);
                 lastNotification = Utils.Logging.sendMessage(Text.literal(s));
             } else {
-                Notification.create(1000, "Module toggle", Notification.Type.INFO, s);
+                Notification.create(1000, "模块切换", Notification.Type.INFO, s);
             }
         }
         if (this.enabled) {

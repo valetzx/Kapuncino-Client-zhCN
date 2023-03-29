@@ -26,9 +26,9 @@ public class CreativeInventoryScreenMixin extends Screen {
 
     @Inject(method = "init", at = @At("RETURN"))
     void coffee_postInit(CallbackInfo ci) {
-        RoundButton nbtEdit = new RoundButton(RoundButton.STANDARD, 5, 5, 64, 20, "NBT editor", () -> {
+        RoundButton nbtEdit = new RoundButton(RoundButton.STANDARD, 5, 5, 64, 20, "NBT编辑", () -> {
             if (CoffeeMain.client.player.getInventory().getMainHandStack().isEmpty()) {
-                Utils.Logging.error("You need to hold an item!");
+                Utils.Logging.error("你需要拿着一件东西!");
             } else {
                 CoffeeMain.client.setScreen(new NbtEditorScreen(CoffeeMain.client.player.getInventory().getMainHandStack()));
             }

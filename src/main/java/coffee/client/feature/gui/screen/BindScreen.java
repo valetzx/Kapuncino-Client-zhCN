@@ -27,7 +27,7 @@ public class BindScreen extends ClientScreen {
     @Override
     public void renderInternal(MatrixStack matrices, int mouseX, int mouseY, float delta) {
         renderBackground(matrices);
-        cfr.drawCenteredString(matrices, "Press any key", width / 2d, height / 2d - cfr.getMarginHeight(), 0xAAAAAA);
+        cfr.drawCenteredString(matrices, "按任意键", width / 2d, height / 2d - cfr.getMarginHeight(), 0xAAAAAA);
         String kn = a.keybind.getValue() > 0 ? GLFW.glfwGetKeyName((int) (a.keybind.getValue() + 0), GLFW.glfwGetKeyScancode((int) (a.keybind.getValue() + 0))) : "None";
         if (kn == null) {
             try {
@@ -44,7 +44,7 @@ public class BindScreen extends ClientScreen {
                 kn = "unknown." + (int) (a.keybind.getValue() + 0);
             }
         }
-        smaller.drawCenteredString(matrices, "Current bind: " + kn, width / 2d, height / 2d, 0xBBBBBB);
+        smaller.drawCenteredString(matrices, "当前绑定: " + kn, width / 2d, height / 2d, 0xBBBBBB);
         super.renderInternal(matrices, mouseX, mouseY, delta);
     }
 
