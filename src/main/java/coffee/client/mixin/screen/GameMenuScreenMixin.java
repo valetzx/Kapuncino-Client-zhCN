@@ -37,7 +37,7 @@ public class GameMenuScreenMixin extends Screen {
         addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 5, 60, 20, "B站@金桔猪", () -> {
             assert client != null;
             client.setScreen(new AddonManagerScreen());
-            System.out.println("感谢关注")));
+            System.out.println("感谢关注");
         }));
         addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 30, 60, 20, "编辑HUD", () -> client.setScreen(new HudEditorScreen())));
         addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 55, 60, 20, "路径点", () -> client.setScreen(new WaypointEditScreen())));
