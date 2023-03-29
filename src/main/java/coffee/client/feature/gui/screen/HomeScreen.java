@@ -95,13 +95,13 @@ public class HomeScreen extends AAScreen {
             entireWidth,
             20,
             ButtonGroupElement.LayoutDirection.RIGHT,
-            new ButtonGroupElement.ButtonEntry("Singleplayer", () -> CoffeeMain.client.setScreen(new SelectWorldScreen(this))),
-            new ButtonGroupElement.ButtonEntry("Multiplayer", () -> CoffeeMain.client.setScreen(new MultiplayerScreen(this))),
-            new ButtonGroupElement.ButtonEntry("Realms", () -> CoffeeMain.client.setScreen(new RealmsMainScreen(this))),
-            new ButtonGroupElement.ButtonEntry("Alts", () -> CoffeeMain.client.setScreen(AltManagerScreen.instance(this))),
-            new ButtonGroupElement.ButtonEntry("Options", () -> CoffeeMain.client.setScreen(new OptionsScreen(this, CoffeeMain.client.options))),
-            new ButtonGroupElement.ButtonEntry("Vanilla", () -> CoffeeMain.client.setScreen(new TitleScreen(false))),
-            new ButtonGroupElement.ButtonEntry("Quit", CoffeeMain.client::scheduleStop));
+            new ButtonGroupElement.ButtonEntry("单人游戏", () -> CoffeeMain.client.setScreen(new SelectWorldScreen(this))),
+            new ButtonGroupElement.ButtonEntry("多人游戏", () -> CoffeeMain.client.setScreen(new MultiplayerScreen(this))),
+            new ButtonGroupElement.ButtonEntry("领域", () -> CoffeeMain.client.setScreen(new RealmsMainScreen(this))),
+            new ButtonGroupElement.ButtonEntry("账号", () -> CoffeeMain.client.setScreen(AltManagerScreen.instance(this))),
+            new ButtonGroupElement.ButtonEntry("设置", () -> CoffeeMain.client.setScreen(new OptionsScreen(this, CoffeeMain.client.options))),
+            new ButtonGroupElement.ButtonEntry("原版界面", () -> CoffeeMain.client.setScreen(new TitleScreen(false))),
+            new ButtonGroupElement.ButtonEntry("退出游戏", CoffeeMain.client::scheduleStop));
         addChild(bge);
     }
 
