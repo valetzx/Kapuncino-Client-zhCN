@@ -34,12 +34,13 @@ public class GameMenuScreenMixin extends Screen {
         if (SelfDestruct.shouldSelfDestruct()) {
             return;
         }
-        addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 5, 60, 20, "Addons", () -> {
+        addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 5, 60, 20, "插件", () -> {
             assert client != null;
             client.setScreen(new AddonManagerScreen());
         }));
-        addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 30, 60, 20, "Edit HUD", () -> client.setScreen(new HudEditorScreen())));
-        addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 55, 60, 20, "Waypoints", () -> client.setScreen(new WaypointEditScreen())));
+        addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 30, 60, 20, "编辑HUD", () -> client.setScreen(new HudEditorScreen())));
+        addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 55, 60, 20, "路径点", () -> client.setScreen(new WaypointEditScreen())));
+        addDrawableChild(new RoundButton(RoundButton.STANDARD, 5, 55, 60, 20, "B站@金桔猪", () -> LOGGER.info("感谢关注")));
     }
 
     @ModifyArg(method = "method_19845", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;setScreen(Lnet/minecraft/client/gui/screen/Screen;)V"), index = 0)

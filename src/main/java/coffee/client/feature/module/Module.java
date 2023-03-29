@@ -56,7 +56,7 @@ public abstract class Module {
                 hasAnnotation = true;
             }
         }
-        this.toasts = this.config.create(new BooleanSetting.Builder(!hasAnnotation).name("Toasts").description("Whether to show enabled / disabled toasts").get());
+        this.toasts = this.config.create(new BooleanSetting.Builder(!hasAnnotation).name("Toasts").description("是否显示启用/禁用的提示").get());
     }
 
     public final void postModuleInit() {

@@ -33,14 +33,14 @@ import java.util.stream.StreamSupport;
 
 public class FakeHacker extends Module {
     final BooleanSetting dodamage = this.config.create(new BooleanSetting.Builder(true).name("Damage")
-            .description("Damage you as-if they attacked you")
+            .description("让倒霉蛋对你造成伤害，就好像他们攻击你一样")
             .get());
 
     PlayerEntity target = null;
     int timer = 20;
 
     public FakeHacker() {
-        super("FakeHacker", "Makes it seem like another user is hacking", ModuleType.RENDER);
+        super("FakeHacker(让别人作弊)", "让它看起来像是另一个玩家在作弊", ModuleType.RENDER);
     }
 
     @MessageSubscription
@@ -88,7 +88,7 @@ public class FakeHacker extends Module {
     public void enable() {
         timer = 20;
         target = null;
-        Notification.create(6000, "", true, Notification.Type.INFO, "Middle click a player to select them");
+        Notification.create(6000, "", true, Notification.Type.INFO, "鼠标中键选择倒霉蛋");
     }
 
     @Override
