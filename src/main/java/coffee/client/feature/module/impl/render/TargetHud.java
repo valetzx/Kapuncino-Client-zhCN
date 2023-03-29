@@ -50,7 +50,7 @@ public class TargetHud extends Module {
     double trackedMaxHp = 0;
 
     public TargetHud() {
-        super("TargetHud", "Shows info about your opponent", ModuleType.RENDER);
+        super("TargetHud", "显示对手的信息", ModuleType.RENDER);
     }
 
     boolean isApplicable(Entity check) {

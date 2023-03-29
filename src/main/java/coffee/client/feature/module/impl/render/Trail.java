@@ -21,7 +21,7 @@ public class Trail extends Module {
     final List<Vec3d> positions = new ArrayList<>();
 
     public Trail() {
-        super("Trail", "Leaves behind a short trail when you travel", ModuleType.RENDER);
+        super("Trail", "当你旅行时会留下一条很短的痕迹", ModuleType.RENDER);
     }
 
     @Override

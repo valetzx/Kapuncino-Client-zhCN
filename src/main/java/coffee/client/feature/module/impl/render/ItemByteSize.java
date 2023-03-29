@@ -15,7 +15,7 @@ import java.text.StringCharacterIterator;
 
 public class ItemByteSize extends Module {
     public ItemByteSize() {
-        super("ItemByteSize", "Shows the size of an item in bytes on the tooltip", ModuleType.RENDER);
+        super("ItemByteSize", "在工具提示上以字节显示项目的大小", ModuleType.RENDER);
     }
 
     public static String humanReadableByteCountBin(long bytes) {
@@ -50,7 +50,7 @@ public class ItemByteSize extends Module {
         } else {
             fmt = humanReadableByteCountBin(count);
         }
-        e.addClientLore("Size: " + fmt);
+        e.addClientLore("大小: " + fmt);
     }
 
     @Override

@@ -10,7 +10,7 @@ public class TitleScreen extends Module {
     final EnumSetting<TitleScreen.Spicy> mode = this.config.create(new EnumSetting.Builder<>(Spicy.SFW).name("Mode").description("Spicy yes or no").get());
 
     public TitleScreen() {
-        super("TitleScreen", "Settings for titlescreen", ModuleType.RENDER);
+        super("TitleScreen", "标题屏幕的设置", ModuleType.RENDER);
     }
 
     @Override

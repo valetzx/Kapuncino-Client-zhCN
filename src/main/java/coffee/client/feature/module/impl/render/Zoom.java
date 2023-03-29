@@ -27,7 +27,7 @@ public class Zoom extends Module {
     double msens = 0.5d;
 
     public Zoom() {
-        super("Zoom", "Imitates the spyglass with more options", ModuleType.RENDER);
+        super("Zoom", "模仿有更多选项的望远镜", ModuleType.RENDER);
     }
 
     static double easeOutBounce(double x) {

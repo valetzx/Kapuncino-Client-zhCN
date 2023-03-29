@@ -23,19 +23,19 @@ import java.util.Objects;
 
 public class FreeLook extends Module {
     private static FreeLook instance = null;
-    final BooleanSetting hold = this.config.create(new BooleanSetting.Builder(true).name("Hold").description("Disables the module after you unpress the keybind").get());
+    final BooleanSetting hold = this.config.create(new BooleanSetting.Builder(true).name("Hold").description("脱下键盘锁后禁用该模块").get());
     @Getter
-    final BooleanSetting enableAA = this.config.create(new BooleanSetting.Builder(false).name("Enable Anti-Aim").description("Hvh toggle rage nn noob").get());
-    final EnumSetting<AntiAimMode> aaMode = this.config.create(new EnumSetting.Builder<>(AntiAimMode.Spin).name("AA Mode").description("How to aim").get());
-    final DoubleSetting aaSpeed = this.config.create(new DoubleSetting.Builder(1).name("AA Speed").description("How fast to aim").min(0.1).max(6).precision(1).get());
-    final DoubleSetting jitterRange = this.config.create(new DoubleSetting.Builder(90).name("Jitter range")
-        .description("How far to jitter")
+    final BooleanSetting enableAA = this.config.create(new BooleanSetting.Builder(false).name("启用反瞄准").description("切换怒气nn noob").get());
+    final EnumSetting<AntiAimMode> aaMode = this.config.create(new EnumSetting.Builder<>(AntiAimMode.Spin).name("AA模式").description("如何瞄准").get());
+    final DoubleSetting aaSpeed = this.config.create(new DoubleSetting.Builder(1).name("AA Speed").description("瞄准速度有多快").min(0.1).max(6).precision(1).get());
+    final DoubleSetting jitterRange = this.config.create(new DoubleSetting.Builder(90).name("抖动范围")
+        .description("抖动多远")
         .min(15)
         .max(90)
         .precision(0)
         .get());
-    final DoubleSetting swayRange = this.config.create(new DoubleSetting.Builder(45).name("Sway range")
-        .description("How far to sway")
+    final DoubleSetting swayRange = this.config.create(new DoubleSetting.Builder(45).name("摇摆范围")
+        .description("摇摆到什么程度")
         .min(15)
         .max(60)
         .precision(0)
@@ -47,7 +47,7 @@ public class FreeLook extends Module {
     int swayYaw = 0;
 
     public FreeLook() {
-        super("FreeLook", "The lunar freelook but without the restrictions", ModuleType.RENDER);
+        super("FreeLook", "月球自由外观，但没有限制", ModuleType.RENDER);
         aaMode.showIf(enableAA::getValue);
         aaSpeed.showIf(() -> aaMode.getValue() != AntiAimMode.Jitter && enableAA.getValue());
         jitterRange.showIf(() -> aaMode.getValue() == AntiAimMode.Jitter && enableAA.getValue());

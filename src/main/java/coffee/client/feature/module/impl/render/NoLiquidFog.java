@@ -13,7 +13,7 @@ public class NoLiquidFog extends Module {
     public static NoLiquidFog INSTANCE;
 
     public NoLiquidFog() {
-        super("NoLiquidFog", "Removes the fogging effects of when you're in water or lava", ModuleType.RENDER);
+        super("NoLiquidFog", "消除当你在水中或熔岩中时的雾化效果", ModuleType.RENDER);
         INSTANCE = this;
     }
 

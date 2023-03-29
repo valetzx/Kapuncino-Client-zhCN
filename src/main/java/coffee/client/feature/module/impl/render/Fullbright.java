@@ -17,7 +17,7 @@ public class Fullbright extends Module {
     double og;
 
     public Fullbright() {
-        super("Fullbright", "Allows you to see in complete darkness", ModuleType.RENDER);
+        super("Fullbright", "让你在完全黑暗的情况下也能看到", ModuleType.RENDER);
     }
 
     @Override

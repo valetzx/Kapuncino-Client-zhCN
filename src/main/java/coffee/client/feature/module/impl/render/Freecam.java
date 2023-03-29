@@ -26,10 +26,10 @@ import java.util.Objects;
 
 public class Freecam extends Module {
 
-    final BooleanSetting deathtoggle = this.config.create(new BooleanSetting.Builder(true).name("Toggle on death")
-            .description("Toggle on death")
+    final BooleanSetting deathtoggle = this.config.create(new BooleanSetting.Builder(true).name("开启死亡")
+            .description("开启死亡")
             .get());
-    final DoubleSetting speed = this.config.create(new DoubleSetting.Builder(2).name("Speed").description("The speed to fly with").min(0).max(10).precision(1).get());
+    final DoubleSetting speed = this.config.create(new DoubleSetting.Builder(2).name("速度").description("飞行的速度").min(0).max(10).precision(1).get());
     Vec3d startloc;
     float pitch = 0f;
     float yaw = 0f;
@@ -37,7 +37,7 @@ public class Freecam extends Module {
     private FakePlayerEntity fakePlayer;
 
     public Freecam() {
-        super("Freecam", "Imitates spectator without you having permission to use it", ModuleType.RENDER);
+        super("Freecam", "未经您许可,模仿<旁观者>", ModuleType.RENDER);
     }
 
     @MessageSubscription

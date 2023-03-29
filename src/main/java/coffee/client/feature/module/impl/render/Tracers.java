@@ -29,7 +29,7 @@ public class Tracers extends Module {
     final BooleanSetting players = this.config.create(new BooleanSetting.Builder(true).name("Show players").description("Render players").get());
 
     public Tracers() {
-        super("Tracers", "Shows where entities are in relation to you", ModuleType.RENDER);
+        super("Tracers", "显示实体与您的关系", ModuleType.RENDER);
     }
 
     @Override

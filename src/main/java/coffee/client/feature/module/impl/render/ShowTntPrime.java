@@ -35,7 +35,7 @@ public class ShowTntPrime extends Module {
     final Int2IntArrayMap i2iamp = new Int2IntArrayMap();
 
     public ShowTntPrime() {
-        super("ShowTntPrime", "Shows how much time is left for a piece of tnt to explode", ModuleType.RENDER);
+        super("ShowTntPrime", "显示了一块tnt炸药爆炸的剩余时间", ModuleType.RENDER);
     }
 
     static void semicircle(MatrixStack stack, Color c, double x, double y, double rad, double width, double segments, double toRad) {

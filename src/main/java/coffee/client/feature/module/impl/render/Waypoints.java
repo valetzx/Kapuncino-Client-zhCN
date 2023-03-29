@@ -49,7 +49,7 @@ public class Waypoints extends Module {
     boolean showCompass = true;
 
     public Waypoints() {
-        super("Waypoints", "Allows you to save locations on servers", ModuleType.RENDER);
+        super("Waypoints", "允许您在服务器上保存位置", ModuleType.RENDER);
         conf.reload();
         Config config1 = conf.get(Config.class);
         waypoints = (config1 == null || config1.getWaypoints() == null) ? new ArrayList<>() : new ArrayList<>(config1.getWaypoints());

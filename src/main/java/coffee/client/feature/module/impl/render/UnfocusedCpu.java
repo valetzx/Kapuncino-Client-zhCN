@@ -11,7 +11,7 @@ import net.minecraft.client.util.math.MatrixStack;
 
 public class UnfocusedCpu extends Module {
     public UnfocusedCpu() {
-        super("UnfocusedCpu", "Prevents rendering of the game when the window is not focused", ModuleType.RENDER);
+        super("UnfocusedCpu", "当窗口没有焦点时阻止游戏的渲染", ModuleType.RENDER);
     }
 
     @Override

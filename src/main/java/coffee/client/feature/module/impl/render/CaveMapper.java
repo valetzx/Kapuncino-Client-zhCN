@@ -62,19 +62,19 @@ public class CaveMapper extends Module {
         .description("Whether to show the entire scanned area (VERY performance intensive)")
         .get());
     final DoubleSetting cacheSize = this.config.create(new DoubleSetting.Builder(10000).precision(0)
-        .name("Cache size")
+        .name("缓存大小")
         .description("How big the cache should be (bigger = more time + more memory)")
         .min(5000)
         .max(30000)
         .get());
-    final BooleanSetting includeTranslucent = this.config.create(new BooleanSetting.Builder(true).name("Scan transparent")
+    final BooleanSetting includeTranslucent = this.config.create(new BooleanSetting.Builder(true).name("扫描透明")
         .description("Scan through transparent blocks as well")
         .get());
     BlockPos start = null;
     boolean scanned = false;
 
     public CaveMapper() {
-        super("CaveMapper", "为矿石绘制一个洞穴地图,扫描暴露的矿石,绕过反x光插件", ModuleType.RENDER);
+        super("洞穴测绘员", "为矿石绘制一个洞穴地图,扫描暴露的矿石,绕过反x光插件", ModuleType.RENDER);
         oreColors.put(Blocks.COAL_ORE, new Color(47, 44, 54));
         oreColors.put(Blocks.IRON_ORE, new Color(236, 173, 119));
         oreColors.put(Blocks.GOLD_ORE, new Color(247, 229, 30));
@@ -103,7 +103,7 @@ public class CaveMapper extends Module {
                 toScan.clear();
                 //hits.clear();
                 if (!scanned) {
-                    Notification.create(6000, "CaveMapper", false, Notification.Type.SUCCESS, "done scanning");
+                    Notification.create(6000, "CaveMapper", false, Notification.Type.SUCCESS, "扫描完毕");
                 }
                 scanned = true;
                 return;
