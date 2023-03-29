@@ -31,7 +31,7 @@ import java.util.Random;
 public interface Texture {
     class main{
         public static String list;
-        public static List<String> categ = Arrays.asList("waifu", "neko", "shinobu", "megumin", "bully", "cuddle", "cry", "awoo", "kiss", "lick", "pat", "bonk", "yeet", "blush", "wave", "highfive", "handhold", "nom", "bite", "slap", "kill", "kick", "happy", "poke", "dance");
+        public static List<String> categ = Arrays.asList("cry", "kiss", "happy", "dance");
         public static String getimage() {
             String random = categ.get(new Random().nextInt(categ.size()));
             try {
