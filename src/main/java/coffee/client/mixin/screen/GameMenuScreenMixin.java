@@ -47,7 +47,7 @@ public class GameMenuScreenMixin extends Screen {
             } else {
                 CoffeeMain.client.setScreen(new NbtEditorScreen(CoffeeMain.client.player.getInventory().getMainHandStack()));
             }
-        });
+        }));
     }
 
     @ModifyArg(method = "method_19845", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/MinecraftClient;setScreen(Lnet/minecraft/client/gui/screen/Screen;)V"), index = 0)
