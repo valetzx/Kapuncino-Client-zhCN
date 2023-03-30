@@ -47,7 +47,7 @@ public class FreeLook extends Module {
     int swayYaw = 0;
 
     public FreeLook() {
-        super("FreeLook", "月球自由外观，但没有限制", ModuleType.RENDER);
+        super("FreeLook", "月球自由外观,但没有限制", ModuleType.RENDER);
         aaMode.showIf(enableAA::getValue);
         aaSpeed.showIf(() -> aaMode.getValue() != AntiAimMode.Jitter && enableAA.getValue());
         jitterRange.showIf(() -> aaMode.getValue() == AntiAimMode.Jitter && enableAA.getValue());

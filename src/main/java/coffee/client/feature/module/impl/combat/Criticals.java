@@ -21,7 +21,7 @@ public class Criticals extends Module {
     final EnumSetting<Mode> mode = this.config.create(new EnumSetting.Builder<>(Mode.Packet).name("Mode").description("How to deal crits").get());
 
     public Criticals() {
-        super("Criticals", "Makes you deal a perfect 10/10 crit every time", ModuleType.COMBAT);
+        super("Criticals", "让你每次都能打出完美的10/10暴击", ModuleType.COMBAT);
 
     }
 

@@ -26,7 +26,7 @@ public class Fling extends Module {
 
 
     public Fling() {
-        super("Fling", "Fling players in the air", ModuleType.COMBAT);
+        super("Fling", "将运动员抛向空中", ModuleType.COMBAT);
         //        Events.registerEventHandlerClass(this);
     }
 

@@ -59,16 +59,16 @@ public class CaveMapper extends Module {
     final BooleanSetting debris = this.config.create(new BooleanSetting.Builder(true).name("远古残骸").description("Whether to show ancient debris").get());
     final BooleanSetting showScanned = this.config.create(new BooleanSetting.Builder(true).name("显示扫描的").description("Whether to show the scanned area").get());
     final BooleanSetting showEntire = this.config.create(new BooleanSetting.Builder(false).name("显示整个区域")
-        .description("Whether to show the entire scanned area (VERY performance intensive)")
+        .description("是否显示整个扫描区域(非常注重性能)")
         .get());
     final DoubleSetting cacheSize = this.config.create(new DoubleSetting.Builder(10000).precision(0)
         .name("缓存大小")
-        .description("How big the cache should be (bigger = more time + more memory)")
+        .description("缓存应该有多大(越大=更多时间+更多内存)")
         .min(5000)
         .max(30000)
         .get());
     final BooleanSetting includeTranslucent = this.config.create(new BooleanSetting.Builder(true).name("扫描透明")
-        .description("Scan through transparent blocks as well")
+        .description("也扫描透明块")
         .get());
     BlockPos start = null;
     boolean scanned = false;

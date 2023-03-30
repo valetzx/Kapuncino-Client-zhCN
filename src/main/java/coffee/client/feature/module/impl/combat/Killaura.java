@@ -67,43 +67,43 @@ public class Killaura extends Module {
     static Random random = new Random();
     final Timer attackCooldown = new Timer();
     final Random r = new Random();
-    @Setting(name = "Attack mode", description = "How to attack the selected entities")
+    @Setting(name = "Attack mode", description = "如何攻击选定的实体")
     AttackMode attackMode = AttackMode.Single;
-    @Setting(name = "Amount", description = "Amount of entities to attack at once (in multi mode)", min = 1, max = 10, precision = 0)
+    @Setting(name = "Amount", description = "一次攻击的实体数量(多模式下)", min = 1, max = 10, precision = 0)
     double amount = 3;
-    @Setting(name = "Select mode", description = "How to select the next target")
+    @Setting(name = "Select mode", description = "如何选择下一个目标")
     SelectMode selectMode = SelectMode.Distance;
-    @Setting(name = "Automatic delay", description = "Automatically sets the delay")
+    @Setting(name = "Automatic delay", description = "自动设置延迟")
     boolean automaticDelay = true;
-    @Setting(name = "Delay", description = "Delay in milliseconds", min = 0, max = 2000, precision = 0)
+    @Setting(name = "Delay", description = "以毫秒为单位的延迟", min = 0, max = 2000, precision = 0)
     double delay = 500;
-    @Setting(name = "Delay random", description = "How much randomness to apply to the delay (in ms)", min = 0, max = 1000, precision = 0)
+    @Setting(name = "Delay random", description = "应用于延迟的随机程度(毫秒)", min = 0, max = 1000, precision = 0)
     RangeSetting.Range delayRandom = new RangeSetting.Range(0, 200);
-    @Setting(name = "Automatic range", description = "Automatically uses your max range as range")
+    @Setting(name = "Automatic range", description = "自动使用您的最大范围作为范围")
     boolean automaticRange = true;
     @Setting(name = "Range", description = "How far to attack entities", min = 1, max = 7, precision = 1)
     double range = 5;
-    @Setting(name = "Smooth look", description = "Smoothly looks at the target entity before attacking it\nHelps bypass anticheats")
+    @Setting(name = "Smooth look", description = "在攻击目标实体之前平稳地观察它\n帮助绕过防攻击")
     boolean smoothLook = true;
-    @Setting(name = "Smooth look speed", description = "How fast to turn on smooth look", min = 1, max = 20, precision = 1)
+    @Setting(name = "Smooth look speed", description = "打开平滑外观的速度", min = 1, max = 20, precision = 1)
     RangeSetting.Range smoothLookRange = new RangeSetting.Range(8, 12);
 
-    @Setting(name = "Attack filter", description = "Which entities to attack")
+    @Setting(name = "Attack filter", description = "要攻击哪些实体")
     ListSetting.FlagSet<AttackFilter> attackFilter = new ListSetting.FlagSet<>(AttackFilter.Hostile, AttackFilter.Players);
-    @Setting(name = "Matrix antibot", description = "Filters the matrix bots out of the target list")
+    @Setting(name = "Matrix antibot", description = "从目标列表中过滤掉矩阵机器人")
     boolean matrixAntibot = true;
-    @Setting(name = "Matrix confidence", description = "How confident the antibot needs to be before filtering\n(0 = 0% confident, 1 = 100%)", min = 0, max = 1, precision = 1)
+    @Setting(name = "Matrix confidence", description = "过滤前需要有多高的置信度\n(0 = 0%置信度,1 = 100%置信度)", min = 0, max = 1, precision = 1)
     double matrixConfidence = 0.7;
     List<LivingEntity> targets = new ArrayList<>();
     int currentRandomDelay = 0;
-    @Setting(name = "Attack partner", description = "Only attacks the current combat partner (The player you intentionally hit before)\nCan be used to bypass bot checks")
+    @Setting(name = "Attack partner", description = "只攻击当前的战斗伙伴(你之前故意攻击的玩家)\n可以用来绕过机器人检查")
     boolean attackPartner = false;
 
-    @Setting(name = "Pause Baritone", description = "Pauses the baritone process when entities are in range")
+    @Setting(name = "Pause Baritone", description = "当实体在范围内时暂停男中音处理")
     boolean pauseBaritone = true;
 
     public Killaura() {
-        super("Killaura", "Automatically attacks all entities in range", ModuleType.COMBAT);
+        super("Killaura", "自动攻击范围内的所有实体", ModuleType.COMBAT);
     }
 
     private static Vec3d[] getHitboxPoints(LivingEntity le) {

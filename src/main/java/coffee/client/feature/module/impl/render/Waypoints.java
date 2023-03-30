@@ -43,9 +43,9 @@ public class Waypoints extends Module {
     public static List<Waypoint> waypoints = new ArrayList<>();
     public static ConfigContainer conf = new ConfigContainer(new File(CoffeeMain.BASE, "waypoints.coffee"));
     List<Runnable> real = new ArrayList<>();
-    @Setting(name = "Tracers", description = "Shows tracers pointing to the waypoints")
+    @Setting(name = "Tracers", description = "显示指向路径点的跟踪器")
     boolean tracers = true;
-    @Setting(name = "Show compass", description = "Shows a compass-like navigator on the top of the screen")
+    @Setting(name = "Show compass", description = "在屏幕顶部显示一个类似指南针的导航器")
     boolean showCompass = true;
 
     public Waypoints() {

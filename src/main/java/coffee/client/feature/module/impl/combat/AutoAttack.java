@@ -18,7 +18,7 @@ import java.util.Objects;
 public class AutoAttack extends Module {
 
     public AutoAttack() {
-        super("AutoAttack", "Automatically attacks the entity you're looking at", ModuleType.COMBAT);
+        super("AutoAttack", "会自动攻击你所看到的实体", ModuleType.COMBAT);
     }
 
     @Override
