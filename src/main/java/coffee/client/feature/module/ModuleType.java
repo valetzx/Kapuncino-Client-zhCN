@@ -9,10 +9,10 @@ public enum ModuleType {
     RENDER("Render", "render.png"),
     MOVEMENT("Movement", "movement.png"),
     MISC("Miscellaneous", "misc.png"),
-    WORLD("World", "world.png"),
+    WORLD("世界", "world.png"),
     EXPLOIT("Exploit", "exploit.png"),
-    ADDON_PROVIDED("Addons", "addons.png"),
-    COMBAT("Combat", "combat.png"),
+    ADDON_PROVIDED("插件", "addons.png"),
+    COMBAT("战斗", "combat.png"),
     GRIEF("Grief", "grief.png"),
     HIDDEN("", "");
 
