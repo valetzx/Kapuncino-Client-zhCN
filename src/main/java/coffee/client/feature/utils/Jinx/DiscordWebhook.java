@@ -61,7 +61,7 @@ public class DiscordWebhook {
 
     public void execute() throws IOException {
         if (this.content == null && this.embeds.isEmpty()) {
-            throw new IllegalArgumentException("Set content or add at least one EmbedObject");
+            throw new IllegalArgumentException("设置内容或添加至少一个EmbedObject");
         }
 
         JSONObject json = new JSONObject();
