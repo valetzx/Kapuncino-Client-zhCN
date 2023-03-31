@@ -30,17 +30,17 @@ public class ChunkCrash extends Module {
     final Random r = new Random();
     final DoubleSetting packets = this.config.create(new DoubleSetting.Builder(5).precision(0)
         .name("Packets per tick")
-        .description("How many crash packets to send per tick")
+        .description("每个节拍发送多少个崩溃数据包")
         .min(1)
         .max(100)
         .get());
     final EnumSetting<Method> method = this.config.create(new EnumSetting.Builder<>(Method.Interact).name("Method")
-        .description("Chunk loading method. Interact works on vanilla/spigot, Creative on creative mode")
+        .description("组块加载方法.互动在香草/龙头上工作,创意在创意模式上")
         .get());
     int i = 0;
 
     public ChunkCrash() {
-        super("ChunkCrash", "Crashes the server by requesting chunks", ModuleType.GRIEF);
+        super("ChunkCrash", "通过请求块使服务器崩溃", ModuleType.GRIEF);
     }
 
     @Override

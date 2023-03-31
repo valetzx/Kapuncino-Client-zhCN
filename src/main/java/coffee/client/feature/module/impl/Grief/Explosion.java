@@ -18,10 +18,10 @@ import net.minecraft.util.math.Vec3d;
 
 public class Explosion extends Module {
 
-    final DoubleSetting size = this.config.create(new DoubleSetting.Builder(1).min(1).max(10).name("Size").description("Size of explosion").get());
+    final DoubleSetting size = this.config.create(new DoubleSetting.Builder(1).min(1).max(10).name("Size").description("爆炸的规模").get());
 
     public Explosion() {
-        super("Explosion", "Explode the map with cool effects", ModuleType.GRIEF);
+        super("Explosion", "用酷炫的效果分解地图", ModuleType.GRIEF);
     }
 
     private static String getBlockNameFromTranslationKey(String translationkey) {
