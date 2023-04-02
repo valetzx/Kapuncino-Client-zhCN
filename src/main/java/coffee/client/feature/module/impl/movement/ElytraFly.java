@@ -28,7 +28,7 @@ public class ElytraFly extends Module {
 
     public ElytraFly() {
 
-        super("ElytraFly", "Allows you to fly with Elytra freely.", ModuleType.MOVEMENT);
+        super("ElytraFly", "让你可以和伊丽特拉一起自由飞翔.", ModuleType.MOVEMENT);
     }
 
     @Override

@@ -20,7 +20,7 @@ public class NoSlow extends Module {
     boolean cobwebs = true;
 
     public NoSlow() {
-        super("NoSlow", "Prevents slowing down from eating, cobwebs, etc", ModuleType.MOVEMENT);
+        super("NoSlow", "防止因进食/蜘蛛网等而放慢速度", ModuleType.MOVEMENT);
     }
 
     @Override

@@ -13,14 +13,14 @@ import net.minecraft.client.util.math.MatrixStack;
 public class VanillaSpeed extends Module {
 
     public final DoubleSetting speed = this.config.create(new DoubleSetting.Builder(3).name("Speed")
-        .description("The speed multiplier to apply")
+        .description("要应用的速度乘数")
         .min(1)
         .max(10)
         .precision(3)
         .get());
 
     public VanillaSpeed() {
-        super("VanillaSpeed", "Gives you an extreme speed boost", ModuleType.MOVEMENT);
+        super("VanillaSpeed", "给你一个极端的速度提升", ModuleType.MOVEMENT);
     }
 
     @Override

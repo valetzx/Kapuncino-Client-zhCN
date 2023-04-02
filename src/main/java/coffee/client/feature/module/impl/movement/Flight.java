@@ -33,11 +33,11 @@ import java.util.Random;
 
 public class Flight extends Module {
 
-    final EnumSetting<FlightMode> mode = this.config.create(new EnumSetting.Builder<>(FlightMode.Vanilla).name("Mode").description("How you fly").get());
+    final EnumSetting<FlightMode> mode = this.config.create(new EnumSetting.Builder<>(FlightMode.Vanilla).name("Mode").description("你如何飞翔").get());
     final BooleanSetting bypassVanillaAc = this.config.create(new BooleanSetting.Builder(true).name("Bypass vanilla AC")
-        .description("Whether to bypass the vanilla anticheat")
+        .description("是否要绕过香草冰淇淋")
         .get());
-    final DoubleSetting speed = this.config.create(new DoubleSetting.Builder(2).name("Speed").description("How fast you fly").min(0).max(10).get());
+    final DoubleSetting speed = this.config.create(new DoubleSetting.Builder(2).name("速度").description("你飞得多快").min(0).max(10).get());
     final List<Packet<?>> queue = new ArrayList<>();
     final Timer lag = new Timer();
     boolean flewBefore = false;
@@ -48,7 +48,7 @@ public class Flight extends Module {
     double lastY = 0;
 
     public Flight() {
-        super("Flight", "Allows you to fly without having permission to", ModuleType.MOVEMENT);
+        super("Flight", "允许你在没有许可的情况下飞行", ModuleType.MOVEMENT);
     }
 
     static PlayerMoveC2SPacket.Full upgrade(PlayerMoveC2SPacket p) {

@@ -12,7 +12,7 @@ import net.minecraft.client.util.math.MatrixStack;
 public class NoLevitation extends Module {
 
     public NoLevitation() {
-        super("NoLevitation", "Prevents the levitation effect from working", ModuleType.MOVEMENT);
+        super("NoLevitation", "阻止悬浮效果发挥作用", ModuleType.MOVEMENT);
     }
 
     @Override

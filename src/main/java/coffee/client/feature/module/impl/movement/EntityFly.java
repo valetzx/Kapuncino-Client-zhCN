@@ -35,7 +35,7 @@ public class EntityFly extends Module {
 
 
     public EntityFly() {
-        super("EntityFly", "Allows you to fly with any entity", ModuleType.MOVEMENT);
+        super("EntityFly", "允许你和任何实体一起飞行", ModuleType.MOVEMENT);
     }
 
     @Override

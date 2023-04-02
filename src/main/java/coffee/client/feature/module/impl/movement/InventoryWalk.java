@@ -18,7 +18,7 @@ public class InventoryWalk extends Module {
     double mouseSpeed = 10;
 
     public InventoryWalk() {
-        super("InventoryWalk", "Allows you to walk with an open inventory", ModuleType.MOVEMENT);
+        super("InventoryWalk", "允许您带着开放式库存行走", ModuleType.MOVEMENT);
     }
 
     @VisibilitySpecifier("Mouse speed")

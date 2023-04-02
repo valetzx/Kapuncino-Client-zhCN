@@ -354,8 +354,8 @@ public class Killaura extends Module {
     @Override
     public String getContext() {
         LinkedHashMap<String, Object> data = new LinkedHashMap<>();
-        data.put("Del", getDelay() + "+" + currentRandomDelay);
-        data.put("Ran", getRange());
+        data.put("延迟", getDelay() + "+" + currentRandomDelay);
+        data.put("范围", getRange());
         data.put("Tar", targets.size());
         return data.keySet().stream().map(s -> s + ":" + data.get(s).toString()).collect(Collectors.joining(" | "));
     }

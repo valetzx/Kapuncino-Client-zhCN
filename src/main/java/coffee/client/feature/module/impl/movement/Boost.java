@@ -26,7 +26,7 @@ public class Boost extends Module {
     final EnumSetting<Mode> mode = this.config.create(new EnumSetting.Builder<>(Mode.Add).name("Mode").description("How to boost you").get());
 
     public Boost() {
-        super("Boost", "Boosts you into the air", ModuleType.MOVEMENT);
+        super("Boost", "把你带到空中", ModuleType.MOVEMENT);
     }
 
     @Override

@@ -6,7 +6,7 @@ import net.minecraft.client.util.math.MatrixStack;
 
 public class AutoWalk extends Module {
     public AutoWalk() {
-        super("AutoWalk", "Automatically walk forwards", ModuleType.MOVEMENT);
+        super("AutoWalk", "自动向前走", ModuleType.MOVEMENT);
     }
 
     @Override
