@@ -37,7 +37,7 @@ public class AnyPlacer extends Module {
     double heightOffset = 1;
 
     public AnyPlacer() {
-        super("AnyPlacer", "Places spawn eggs with infinite reach (requires creative)", ModuleType.WORLD);
+        super("AnyPlacer", "无限延伸产卵的地方(需要创造)", ModuleType.WORLD);
     }
 
     @MessageSubscription

@@ -24,7 +24,7 @@ public class AirPlace extends Module {
     boolean enabled = false;
 
     public AirPlace() {
-        super("AirPlace", "Places blocks in the air", ModuleType.MISC);
+        super("AirPlace", "将积木放在空中", ModuleType.MISC);
     }
 
     @MessageSubscription

@@ -27,7 +27,7 @@ import java.util.List;
 
 public class AutoIgnite extends Module {
     public AutoIgnite() {
-        super("AutoIgnite", "Automatically ignites any tnt in sight", ModuleType.WORLD);
+        super("AutoIgnite", "自动点燃视线内的任何tnt炸药", ModuleType.WORLD);
     }
 
     int getLighterSlot() {

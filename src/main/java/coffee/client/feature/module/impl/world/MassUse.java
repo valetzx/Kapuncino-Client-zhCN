@@ -40,7 +40,7 @@ public class MassUse extends Module {
         .get());
 
     public MassUse() {
-        super("MassUse", "Uses an item or block several times", ModuleType.WORLD);
+        super("MassUse", "多次使用一个项目或块", ModuleType.WORLD);
     }
 
     @MessageSubscription

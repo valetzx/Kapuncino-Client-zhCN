@@ -26,7 +26,7 @@ public class XRAY extends Module {
     public static final List<Block> blocks = Lists.newArrayList();
 
     public XRAY() {
-        super("XRAY", "Allows you to see ores through blocks", ModuleType.WORLD);
+        super("XRAY", "让你透过石块看到矿石", ModuleType.WORLD);
         Registries.BLOCK.forEach(block -> {
             if (blockApplicable(block)) {
                 blocks.add(block);

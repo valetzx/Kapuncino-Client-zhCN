@@ -30,7 +30,7 @@ public class BlockTagViewer extends Module {
     float mw = 0;
 
     public BlockTagViewer() {
-        super("BlockTagViewer", "Shows data about the viewed block", ModuleType.WORLD);
+        super("BlockTagViewer", "显示关于所查看块的数据", ModuleType.WORLD);
     }
 
     @Override

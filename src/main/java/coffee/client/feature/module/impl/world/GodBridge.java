@@ -31,7 +31,7 @@ public class GodBridge extends Module {
     Notification isReady = null;
 
     public GodBridge() {
-        super("GodBridge", "Automatically makes you look like a badass", ModuleType.WORLD);
+        super("GodBridge", "自动让你看起来像个坏蛋", ModuleType.WORLD);
     }
 
     boolean isReady() {

@@ -55,7 +55,7 @@ public class Flattener extends Module {
     boolean toBreakEmptyBefore = false;
 
     public Flattener() {
-        super("Flattener", "Makes everything around you flat, good for making a floor or base", ModuleType.WORLD);
+        super("Flattener", "让你周围的一切变得平坦,适合做地板或底座", ModuleType.WORLD);
     }
 
     @Override

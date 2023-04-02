@@ -43,7 +43,7 @@ public class Boom extends Module {
     final EnumSetting<Mode> mode = this.config.create(new EnumSetting.Builder<>(Mode.FireballGhast).name("Mode").description("How to send the fireball off").get());
 
     public Boom() {
-        super("Boom", "Spawns fireballs wherever you click", ModuleType.WORLD);
+        super("Boom", "在你点击的地方产生火球", ModuleType.WORLD);
         speed.showIf(() -> mode.getValue() == Mode.FireballGhast);
     }
 

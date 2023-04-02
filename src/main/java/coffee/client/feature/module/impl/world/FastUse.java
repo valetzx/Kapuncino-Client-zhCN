@@ -12,7 +12,7 @@ import net.minecraft.client.util.math.MatrixStack;
 public class FastUse extends Module {
 
     public FastUse() {
-        super("FastUse", "Removes the use delay", ModuleType.WORLD);
+        super("FastUse", "消除使用延迟", ModuleType.WORLD);
     }
 
     @Override

@@ -31,7 +31,7 @@ public class InstantBreak extends Module {
         .get());
 
     public InstantBreak() {
-        super("InstantBreak", "Breaks a block a lot faster", ModuleType.WORLD);
+        super("InstantBreak", "打破一块快得多", ModuleType.WORLD);
     }
 
     @MessageSubscription

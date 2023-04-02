@@ -31,7 +31,7 @@ public class AutoFish extends Module {
         .get());
 
     public AutoFish() {
-        super("AutoFish", "Automatically catches fish for you", ModuleType.WORLD);
+        super("AutoFish", "自动钓鱼", ModuleType.WORLD);
     }
 
     @MessageSubscription
