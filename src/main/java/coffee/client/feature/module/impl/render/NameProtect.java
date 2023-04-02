@@ -10,9 +10,9 @@ public class NameProtect extends Module {
     final StringSetting name = this.config.create(new StringSetting.Builder("REPLACE").name("name").description("the name to use").get());
 
 
-    private String username = "If you see this, something is wrong.";
+    private String username = "如果你看到这个,一定有问题.";
     public NameProtect() {
-        super("NameProtect", "Spoof your name client-side", ModuleType.RENDER);
+        super("NameProtect", "假冒你的名字客户端", ModuleType.RENDER);
     }
 
     @Override

@@ -21,7 +21,7 @@ public class Bookban extends Command {
     public void onExecute(String[] args) throws CommandException {
         if (client.player.getMainHandStack().getItem() != Items.WRITABLE_BOOK) Utils.Logging.message("You must be holding a book!");
         writeBook();
-        Utils.Logging.message("Successfully wrote book!");
+        Utils.Logging.message("成功写书!");
     }
 
     private void writeBook() {

@@ -9,7 +9,7 @@ import net.minecraft.network.packet.c2s.play.HandSwingC2SPacket;
 
 public class NoSwing extends Module {
     public NoSwing() {
-        super("NoSwing", "Cancel HandSwing packets", ModuleType.MISC);
+        super("NoSwing", "取消手摇包", ModuleType.MISC);
     }
 
     @MessageSubscription()

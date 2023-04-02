@@ -14,7 +14,7 @@ public class AutoTotem extends Module {
     private int totemCount = 0;
 
     public AutoTotem() {
-        super("AutoTotem", "Automatically put totems in offhand", ModuleType.COMBAT);
+        super("AutoTotem", "立即自动放置图腾", ModuleType.COMBAT);
     }
 
     final EnumSetting<AutoTotem.modes> mode = this.config.create(new EnumSetting.Builder<>(modes.Strict).name("Mode").description("Mode to use").get());
