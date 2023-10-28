@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Sprint extends Module {
 
     public Sprint() {
-        super("Sprint", "Always sprints when you walk", ModuleType.MOVEMENT);
+        super("Sprint", "走路时总是冲刺", ModuleType.MOVEMENT);
     }
 
     @Override

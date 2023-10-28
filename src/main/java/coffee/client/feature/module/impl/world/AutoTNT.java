@@ -42,7 +42,7 @@ public class AutoTNT extends Module {
     boolean missingTntAck = false;
 
     public AutoTNT() {
-        super("AutoTNT", "Automatically places tnt in a grid", ModuleType.WORLD);
+        super("AutoTNT", "自动将tnt放置在网格中", ModuleType.WORLD);
     }
 
     @Override

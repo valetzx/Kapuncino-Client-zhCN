@@ -9,7 +9,7 @@ import net.minecraft.util.math.Vec3d;
 
 public class WorldGuardBypass extends Module {
     public WorldGuardBypass() {
-        super("WGMoveBypass", "Bypasses WorldGuard Enter deny", ModuleType.MOVEMENT);
+        super("WGMoveBypass", "绕过WorldGuard回车拒绝", ModuleType.MOVEMENT);
     }
 
     @Override

@@ -23,13 +23,13 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class Decimator extends Module {
     final DoubleSetting radius = this.config.create(new DoubleSetting.Builder(100).precision(0)
         .name("Radius")
-        .description("How much to erase on X and Z")
+        .description("X和Z上要擦除多少")
         .min(20)
         .max(500)
         .get());
     final DoubleSetting delay = this.config.create(new DoubleSetting.Builder(30).precision(0)
         .name("Delay")
-        .description("How much delay to use while erasing")
+        .description("擦除时使用的延迟时间")
         .min(0)
         .max(1000)
         .get());
@@ -39,7 +39,7 @@ public class Decimator extends Module {
     Vec3d latest = null;
 
     public Decimator() {
-        super("Decimator", "Transforms a radius around you to void", ModuleType.GRIEF);
+        super("Decimator", "将您周围的半径转换为空", ModuleType.GRIEF);
     }
 
     @Override
@@ -80,7 +80,7 @@ public class Decimator extends Module {
 
     @Override
     public void disable() {
-        Notification.create(6000, "Voider", Notification.Type.INFO, "Waiting for cleanup...");
+        Notification.create(6000, "Voider", Notification.Type.INFO, "等待清理...");
         cancel.set(true);
     }
 

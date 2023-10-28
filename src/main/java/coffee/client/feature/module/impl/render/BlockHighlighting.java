@@ -27,7 +27,7 @@ import java.util.SortedSet;
 
 public class BlockHighlighting extends Module {
     public BlockHighlighting() {
-        super("BlockHighlighting", "Renders better block breaking animations", ModuleType.RENDER);
+        super("区块高亮", "渲染更好的块打破动画", ModuleType.RENDER);
     }
 
     @MessageSubscription

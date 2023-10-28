@@ -17,7 +17,7 @@ public class ClickGUI extends Module {
     int t = 2;
 
     public ClickGUI() {
-        super("ClickGUI", "A visual manager for all modules", ModuleType.RENDER);
+        super("ClickGUI", "所有模块的可视化管理器", ModuleType.RENDER);
         this.keybind.setValue((double) GLFW.GLFW_KEY_RIGHT_SHIFT);
     }
 

@@ -9,7 +9,7 @@ import net.minecraft.util.math.BlockPos;
 
 public class GhostBlockFly extends Module {
     public GhostBlockFly() {
-        super("GhostBlockFly", "Fly using ghost blocks", ModuleType.MOVEMENT);
+        super("GhostBlockFly", "使用幽灵街区飞行", ModuleType.MOVEMENT);
     }
 
     BlockState state = null;

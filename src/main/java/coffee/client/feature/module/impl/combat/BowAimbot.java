@@ -30,14 +30,14 @@ public class BowAimbot extends Module {
     static final Color CAN_ROTATE_OUTER = new Color(8, 93, 21);
     static final Color CANT_ROTATE_INNER = new Color(217, 52, 30, 50);
     static final Color CANT_ROTATE_OUTER = new Color(94, 18, 12);
-    @Setting(name = "Max range", description = "How far to cap off entities for target selection", min = 10, max = 200, precision = 0)
+    @Setting(name = "Max range", description = "距离目标选择的实体有多远", min = 10, max = 200, precision = 0)
     double maxRange = 60;
-    @Setting(name = "Priority", description = "How to select an entity")
+    @Setting(name = "Priority", description = "如何选择实体")
     TargetMode targetMode = TargetMode.NearestCrosshair;
     LivingEntity target;
 
     public BowAimbot() {
-        super("BowAimbot", "Automatically aims your bow at nearby entities", ModuleType.COMBAT);
+        super("BowAimbot", "自动瞄准附近的实体", ModuleType.COMBAT);
     }
 
     private static Rotation getRotationFor(Vec3d target) {

@@ -18,7 +18,7 @@ public class Step extends Module {
     final DoubleSetting height = this.config.create(new DoubleSetting.Builder(3).name("Height").description("How high to step").min(1).max(50).precision(0).get());
 
     public Step() {
-        super("Step", "Allows you to step up full blocks", ModuleType.MOVEMENT);
+        super("Step", "允许您升级整个程序块", ModuleType.MOVEMENT);
     }
 
     @Override

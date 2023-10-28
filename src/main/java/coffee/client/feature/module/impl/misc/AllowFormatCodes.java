@@ -12,7 +12,7 @@ import net.minecraft.client.util.math.MatrixStack;
 public class AllowFormatCodes extends Module {
 
     public AllowFormatCodes() {
-        super("AllowFormatCodes", "Allows you to type format codes with the paragraph symbol", ModuleType.MISC);
+        super("AllowFormatCodes", "允许您键入带有段落符号的格式代码", ModuleType.MISC);
     }
 
     @Override

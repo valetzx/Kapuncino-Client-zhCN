@@ -15,7 +15,7 @@ public class AdBlock extends Module {
     long blocked = 0;
 
     public AdBlock() {
-        super("AdBlock", "Blocks the /ad command on minehut from sending to you", ModuleType.MISC);
+        super("AdBlock", "阻止minehut上的/ad命令发送给您", ModuleType.MISC);
     }
 
     @MessageSubscription

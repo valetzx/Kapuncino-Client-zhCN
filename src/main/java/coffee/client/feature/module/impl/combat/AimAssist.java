@@ -33,39 +33,39 @@ import java.util.Objects;
 public class AimAssist extends Module {
 
     final BooleanSetting attackPlayers = this.config.create(new BooleanSetting.Builder(true).name("Attack players")
-        .description("Whether or not to aim at players")
+        .description("是否针对玩家")
         .get());
     final BooleanSetting attackHostile = this.config.create(new BooleanSetting.Builder(true).name("Attack hostile")
-        .description("Whether or not to aim at hostile entities")
+        .description("是否瞄准敌对实体")
         .get());
     final BooleanSetting attackNeutral = this.config.create(new BooleanSetting.Builder(true).name("Attack neutral")
-        .description("Whether or not to aim at neutral entities")
+        .description("是否针对中立实体")
         .get());
     final BooleanSetting attackPassive = this.config.create(new BooleanSetting.Builder(true).name("Attack passive")
-        .description("Whether or nott o aim at passive entities")
+        .description("是否针对被动实体")
         .get());
     final BooleanSetting attackEverything = this.config.create(new BooleanSetting.Builder(true).name("Attack everything")
-        .description("Whether or not to aim at everything else")
+        .description("是否瞄准其他一切")
         .get());
     final BooleanSetting aimAtCombatPartner = this.config.create(new BooleanSetting.Builder(true).name("Aim at combat")
-        .description("Whether or not to only aim at the combat partner")
+        .description("是否只瞄准战斗伙伴")
         .get());
     final EnumSetting<PriorityMode> priority = this.config.create(new EnumSetting.Builder<>(PriorityMode.Distance).name("Priority")
-        .description("What to prioritize when aiminig")
+        .description("瞄准时优先考虑什么")
         .get());
     final DoubleSetting laziness = this.config.create(new DoubleSetting.Builder(1).name("Laziness")
-        .description("How lazy to get when aiming")
+        .description("瞄准的时候有多懒")
         .min(0.1)
         .max(5)
         .precision(1)
         .get());
     final BooleanSetting aimInstant = this.config.create(new BooleanSetting.Builder(false).name("Aim instantly")
-        .description("Whether or not to aim instantly instead of smoothly")
+        .description("是否立即瞄准而不是平稳瞄准")
         .get());
     Entity le;
 
     public AimAssist() {
-        super("AimAssist", "Automatically aims at people around you", ModuleType.COMBAT);
+        super("AimAssist", "自动瞄准你周围的人", ModuleType.COMBAT);
         attackPlayers.showIf(() -> !aimAtCombatPartner.getValue());
         attackHostile.showIf(() -> !aimAtCombatPartner.getValue());
         attackNeutral.showIf(() -> !aimAtCombatPartner.getValue());

@@ -22,7 +22,7 @@ public class KnockbackPlus extends Module {
 
 
     public KnockbackPlus() {
-        super("KnockbackPlus", "Makes you give the thing you're hitting extra knockback", ModuleType.COMBAT);
+        super("KnockbackPlus", "让你给你打的东西额外的一击", ModuleType.COMBAT);
     }
 
     @MessageSubscription

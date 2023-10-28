@@ -21,7 +21,7 @@ public class Angryman extends Module {
     Timer updater = new Timer();
 
     public Angryman() {
-        super("Angryman", "Automatically makes surrounding endermen angry, at you", ModuleType.MISC);
+        super("Angryman", "自动让周围的恩德门对你生气", ModuleType.MISC);
     }
 
     @Override

@@ -24,7 +24,7 @@ public class BlocksMCFlight extends Module {
     double yStart = 0;
 
     public BlocksMCFlight() {
-        super("BlocksMCFlight", "Bypasses the blocksmc anticheat and flies", ModuleType.MOVEMENT);
+        super("BlocksMCFlight", "绕过路障逃跑了", ModuleType.MOVEMENT);
     }
 
     @Override

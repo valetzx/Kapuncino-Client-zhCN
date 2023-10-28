@@ -87,7 +87,7 @@ public class ClickGUI extends AAScreen {
     protected void initInternal() {
         help = new ClickableTextElement(5,
             client.getWindow().getScaledHeight() - FontRenderers.getRenderer().getFontHeight() - 5,
-            "Click me for help",
+            "点击我寻求帮助",
             FontRenderers.getRenderer(),
             () -> client.setScreen(new HelpScreen(this)),
             0xCCCCCC);

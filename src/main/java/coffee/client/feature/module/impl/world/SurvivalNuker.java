@@ -63,7 +63,7 @@ public class SurvivalNuker extends Module {
     int delayPassed = 0;
 
     public SurvivalNuker() {
-        super("SurvivalNuker", "Breaks a lot of blocks around you fast", ModuleType.WORLD);
+        super("SurvivalNuker", "快速打破你周围的许多障碍", ModuleType.WORLD);
     }
 
     boolean isBlockApplicable(Block b) {

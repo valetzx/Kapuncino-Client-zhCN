@@ -18,7 +18,7 @@ public class AutoSign extends Module {
     final StringSetting ss4 = this.config.create(new StringSetting.Builder("github.com/0x3C50").name("Line 4").description("The text for line 4").get());
 
     public AutoSign() {
-        super("AutoSign", "Automatically write signs when looking at them", ModuleType.WORLD);
+        super("AutoSign", "看到标志时自动书写", ModuleType.WORLD);
     }
 
     @Override

@@ -13,7 +13,7 @@ import net.minecraft.client.util.math.MatrixStack;
 public class MoonGravity extends Module {
 
     public MoonGravity() {
-        super("MoonGravity", "Imitates gravity on the moon", ModuleType.MOVEMENT);
+        super("MoonGravity", "模仿月球上的重力", ModuleType.MOVEMENT);
     }
 
     @Override

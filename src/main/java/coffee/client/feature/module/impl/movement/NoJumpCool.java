@@ -14,7 +14,7 @@ import net.minecraft.client.util.math.MatrixStack;
 public class NoJumpCool extends Module {
 
     public NoJumpCool() {
-        super("NoJumpCool", "Removes the jump cooldown", ModuleType.MOVEMENT);
+        super("NoJumpCool", "移除跳跃冷却时间", ModuleType.MOVEMENT);
     }
 
     @Override

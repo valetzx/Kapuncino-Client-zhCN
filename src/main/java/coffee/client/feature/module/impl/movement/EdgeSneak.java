@@ -20,7 +20,7 @@ public class EdgeSneak extends Module {
     boolean shouldSneak = false;
 
     public EdgeSneak() {
-        super("EdgeSneak", "Sneaks automatically at the edges of blocks", ModuleType.MOVEMENT);
+        super("EdgeSneak", "在街区边缘自动潜行", ModuleType.MOVEMENT);
     }
 
     @MessageSubscription

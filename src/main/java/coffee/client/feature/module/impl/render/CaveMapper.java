@@ -47,34 +47,34 @@ public class CaveMapper extends Module {
     final List<BlockPos> ores = new ArrayList<>();
     final List<BlockPos> toScan = new ArrayList<>();
     final List<Map.Entry<BlockPos, List<Vec3d>>> circ = new ArrayList<>();
-    final BooleanSetting coal = this.config.create(new BooleanSetting.Builder(false).name("Coal").description("Whether to show coal").get());
-    final BooleanSetting iron = this.config.create(new BooleanSetting.Builder(false).name("Iron").description("Whether to show iron").get());
-    final BooleanSetting gold = this.config.create(new BooleanSetting.Builder(false).name("Gold").description("Whether to show gold").get());
-    final BooleanSetting redstone = this.config.create(new BooleanSetting.Builder(false).name("Redstone").description("Whether to show redstone ore").get());
-    final BooleanSetting diamond = this.config.create(new BooleanSetting.Builder(true).name("Diamond").description("Whether to show diamonds").get());
-    final BooleanSetting lapis = this.config.create(new BooleanSetting.Builder(false).name("Lapis").description("Whether to show lapis").get());
-    final BooleanSetting copper = this.config.create(new BooleanSetting.Builder(false).name("Copper").description("Whether to show copper").get());
-    final BooleanSetting emerald = this.config.create(new BooleanSetting.Builder(false).name("Emerald").description("Whether to show emeralds").get());
-    final BooleanSetting quartz = this.config.create(new BooleanSetting.Builder(false).name("Quartz").description("Whether to show quartz").get());
-    final BooleanSetting debris = this.config.create(new BooleanSetting.Builder(true).name("Ancient debris").description("Whether to show ancient debris").get());
-    final BooleanSetting showScanned = this.config.create(new BooleanSetting.Builder(true).name("Show scanned").description("Whether to show the scanned area").get());
-    final BooleanSetting showEntire = this.config.create(new BooleanSetting.Builder(false).name("Show entire area")
-        .description("Whether to show the entire scanned area (VERY performance intensive)")
+    final BooleanSetting coal = this.config.create(new BooleanSetting.Builder(false).name("煤炭").description("是否显示煤炭").get());
+    final BooleanSetting iron = this.config.create(new BooleanSetting.Builder(false).name("铁锭").description("是否显示铁").get());
+    final BooleanSetting gold = this.config.create(new BooleanSetting.Builder(false).name("金锭").description("是否显示金").get());
+    final BooleanSetting redstone = this.config.create(new BooleanSetting.Builder(false).name("红石").description("是否显示红石矿石").get());
+    final BooleanSetting diamond = this.config.create(new BooleanSetting.Builder(true).name("钻石").description("是否显示钻石").get());
+    final BooleanSetting lapis = this.config.create(new BooleanSetting.Builder(false).name("青金石").description("是否显示青金石").get());
+    final BooleanSetting copper = this.config.create(new BooleanSetting.Builder(false).name("铜").description("是否显示铜").get());
+    final BooleanSetting emerald = this.config.create(new BooleanSetting.Builder(false).name("绿宝石").description("Whether to show emeralds").get());
+    final BooleanSetting quartz = this.config.create(new BooleanSetting.Builder(false).name("下界石英").description("Whether to show quartz").get());
+    final BooleanSetting debris = this.config.create(new BooleanSetting.Builder(true).name("远古残骸").description("Whether to show ancient debris").get());
+    final BooleanSetting showScanned = this.config.create(new BooleanSetting.Builder(true).name("显示扫描的").description("Whether to show the scanned area").get());
+    final BooleanSetting showEntire = this.config.create(new BooleanSetting.Builder(false).name("显示整个区域")
+        .description("是否显示整个扫描区域(非常注重性能)")
         .get());
     final DoubleSetting cacheSize = this.config.create(new DoubleSetting.Builder(10000).precision(0)
-        .name("Cache size")
-        .description("How big the cache should be (bigger = more time + more memory)")
+        .name("缓存大小")
+        .description("缓存应该有多大(越大=更多时间+更多内存)")
         .min(5000)
         .max(30000)
         .get());
-    final BooleanSetting includeTranslucent = this.config.create(new BooleanSetting.Builder(true).name("Scan transparent")
-        .description("Scan through transparent blocks as well")
+    final BooleanSetting includeTranslucent = this.config.create(new BooleanSetting.Builder(true).name("扫描透明")
+        .description("也扫描透明块")
         .get());
     BlockPos start = null;
     boolean scanned = false;
 
     public CaveMapper() {
-        super("CaveMapper", "Maps a cave for ores, scanning for exposed ones, to bypass antixray plugins", ModuleType.RENDER);
+        super("洞穴测绘员", "为矿石绘制一个洞穴地图,扫描暴露的矿石,绕过反x光插件", ModuleType.RENDER);
         oreColors.put(Blocks.COAL_ORE, new Color(47, 44, 54));
         oreColors.put(Blocks.IRON_ORE, new Color(236, 173, 119));
         oreColors.put(Blocks.GOLD_ORE, new Color(247, 229, 30));
@@ -103,7 +103,7 @@ public class CaveMapper extends Module {
                 toScan.clear();
                 //hits.clear();
                 if (!scanned) {
-                    Notification.create(6000, "CaveMapper", false, Notification.Type.SUCCESS, "done scanning");
+                    Notification.create(6000, "CaveMapper", false, Notification.Type.SUCCESS, "扫描完毕");
                 }
                 scanned = true;
                 return;

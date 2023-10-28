@@ -26,7 +26,7 @@ public class Backtrack extends Module {
     boolean committed = false;
 
     public Backtrack() {
-        super("Backtrack", "Allows you to redo your movement if you messed up", ModuleType.MOVEMENT);
+        super("Backtrack", "如果你搞砸了,允许你重做你的动作", ModuleType.MOVEMENT);
     }
 
     @MessageSubscription

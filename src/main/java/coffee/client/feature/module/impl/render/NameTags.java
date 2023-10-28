@@ -24,7 +24,7 @@ import java.util.Comparator;
 
 public class NameTags extends Module {
     public NameTags() {
-        super("NameTags", "Shows information about players above them", ModuleType.RENDER);
+        super("NameTags", "显示上面玩家的信息", ModuleType.RENDER);
     }
 
 
@@ -64,10 +64,10 @@ public class NameTags extends Module {
         String gmString = "§cBot";
         if (gamemode != null) {
             switch (gamemode) {
-                case ADVENTURE -> gmString = "Adventure";
-                case CREATIVE -> gmString = "Creative";
-                case SURVIVAL -> gmString = "Survival";
-                case SPECTATOR -> gmString = "Spectator";
+                case ADVENTURE -> gmString = "冒险";
+                case CREATIVE -> gmString = "创造";
+                case SURVIVAL -> gmString = "生成";
+                case SPECTATOR -> gmString = "观众";
             }
         }
         MatrixStack stack1 = Renderer.R3D.getEmptyMatrixStack();

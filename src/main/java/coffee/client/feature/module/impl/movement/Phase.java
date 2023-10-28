@@ -21,7 +21,7 @@ import java.util.Objects;
 public class Phase extends Module {
 
     public Phase() {
-        super("Phase", "Go through walls when flying (works best with creative)", ModuleType.MOVEMENT);
+        super("Phase", "飞行时穿墙(与创意配合使用效果最佳)", ModuleType.MOVEMENT);
     }
 
     @MessageSubscription

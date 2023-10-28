@@ -51,7 +51,7 @@ public class StorageHighlighter extends Module {
     final Hashtable<Class<?>, Color> colors = new Hashtable<>();
 
     public StorageHighlighter() {
-        super("StorageHighlighter", "Shows all the storage blocks in the area", ModuleType.RENDER);
+        super("StorageHighlighter", "显示该区域中的所有存储块", ModuleType.RENDER);
 
         loadColors();
     }

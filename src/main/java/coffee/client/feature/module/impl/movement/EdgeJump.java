@@ -16,7 +16,7 @@ import java.util.Objects;
 public class EdgeJump extends Module {
 
     public EdgeJump() {
-        super("EdgeJump", "Jumps automatically at the edges of blocks", ModuleType.MOVEMENT);
+        super("EdgeJump", "在块的边缘自动跳转", ModuleType.MOVEMENT);
     }
 
     @Override

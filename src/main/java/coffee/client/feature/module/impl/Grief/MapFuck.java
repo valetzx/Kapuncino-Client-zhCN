@@ -18,7 +18,7 @@ import java.util.Random;
 public class MapFuck extends Module {
 
     public MapFuck() {
-        super("MapFuck", "Nuke maps", ModuleType.GRIEF);
+        super("MapFuck", "核武器地图", ModuleType.GRIEF);
     }
 
     @Override

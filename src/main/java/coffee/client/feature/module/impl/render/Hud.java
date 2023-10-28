@@ -60,7 +60,7 @@ public class Hud extends Module {
 
 
     public Hud() {
-        super("Hud", "Shows information about the player on screen", ModuleType.RENDER);
+        super("Hud", "在屏幕上显示玩家的信息", ModuleType.RENDER);
         lastTimePacketReceived = System.currentTimeMillis();
 
         EventSystem.manager.registerSubscribers(new Object() { // don't unregister when disabled

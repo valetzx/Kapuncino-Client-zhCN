@@ -18,7 +18,7 @@ import java.util.List;
 public class AirJump extends Module {
 
     public AirJump() {
-        super("AirJump", "Allows you to jump mid air", ModuleType.MOVEMENT);
+        super("AirJump", "允许你在半空中跳跃", ModuleType.MOVEMENT);
     }
 
     @Override

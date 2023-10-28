@@ -13,7 +13,7 @@ import net.minecraft.client.util.math.MatrixStack;
 
 public class Radar extends Module {
     final DoubleSetting scale = this.config.create(new DoubleSetting.Builder(3).name("Scale")
-        .description("How much area to show around you")
+        .description("你周围有多少区域可以展示")
         .min(0.1)
         .max(10)
         .precision(1)
@@ -21,7 +21,7 @@ public class Radar extends Module {
     public double iScale = 0;
 
     public Radar() {
-        super("Radar", "Allows you to see other players and entities around", ModuleType.RENDER);
+        super("Radar", "允许你看到周围的其他玩家和实体", ModuleType.RENDER);
     }
 
     @Override

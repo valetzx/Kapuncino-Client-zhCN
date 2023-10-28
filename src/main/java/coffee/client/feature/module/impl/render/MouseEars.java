@@ -12,7 +12,7 @@ import net.minecraft.client.util.math.MatrixStack;
 public class MouseEars extends Module {
 
     public MouseEars() {
-        super("MouseEars", "Shows the Deadmau5 skin ears for every player", ModuleType.RENDER);
+        super("MouseEars", "显示了每个玩家的死毛5皮肤耳朵", ModuleType.RENDER);
     }
 
     @Override

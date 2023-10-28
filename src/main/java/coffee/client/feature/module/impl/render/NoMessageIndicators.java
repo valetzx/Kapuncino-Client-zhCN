@@ -11,7 +11,7 @@ import net.minecraft.client.util.math.MatrixStack;
 
 public class NoMessageIndicators extends Module {
     public NoMessageIndicators() {
-        super("NoMessageIndicators", "Shut the fuck up mojang\n(removes the colored bar at the left of each chat message)", ModuleType.RENDER);
+        super("NoMessageIndicators", "闭嘴mojang\n(删除每条聊天消息左侧的彩色条)", ModuleType.RENDER);
     }
 
     @Override

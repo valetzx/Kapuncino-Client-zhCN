@@ -90,7 +90,7 @@ public class WaypointEditScreen extends AAScreen {
         Waypoints.Waypoint wp;
 
         public EditScreen(Screen parent, Waypoints.Waypoint wp) {
-            super(parent, "Waypoint editor", "Edit waypoints");
+            super(parent, "航点编辑器", "编辑航点");
             this.wp = wp;
         }
 
@@ -221,8 +221,8 @@ public class WaypointEditScreen extends AAScreen {
                 getWidth() - 10,
                 20,
                 ButtonGroupElement.LayoutDirection.RIGHT,
-                new ButtonGroupElement.ButtonEntry("Edit", this::edit),
-                new ButtonGroupElement.ButtonEntry("Go here", this::go));
+                new ButtonGroupElement.ButtonEntry("编辑", this::edit),
+                new ButtonGroupElement.ButtonEntry("去这里", this::go));
             this.delete = new TexturedButtonElement(new Color(255, 70, 70),
                 0,
                 0,

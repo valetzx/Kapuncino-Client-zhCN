@@ -21,12 +21,12 @@ import java.util.Objects;
 
 public class Annihilator extends Module {
 
-    final DoubleSetting range = this.config.create(new DoubleSetting.Builder(5).name("Range").description("Range of the nuke").min(1).max(14).precision(0).get());
-    final StringSetting block = this.config.create(new StringSetting.Builder("air").name("Block").description("The block to fill with").get());
+    final DoubleSetting range = this.config.create(new DoubleSetting.Builder(5).name("Range").description("核武器的射程").min(1).max(14).precision(0).get());
+    final StringSetting block = this.config.create(new StringSetting.Builder("air").name("Block").description("要填充的块").get());
 
 
     public Annihilator() {
-        super("Annihilator", "Nukes whatever you click at, requires /fill permissions", ModuleType.GRIEF);
+        super("Annihilator", "核化你点击的任何东西,requires /fill permissions", ModuleType.GRIEF);
     }
 
     @MessageSubscription

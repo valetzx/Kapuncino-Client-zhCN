@@ -12,7 +12,7 @@ import net.minecraft.client.util.math.MatrixStack;
 public class NoPush extends Module {
 
     public NoPush() {
-        super("NoPush", "Prevents other entities from pushing you around", ModuleType.MOVEMENT);
+        super("NoPush", "防止其他实体摆布你", ModuleType.MOVEMENT);
     }
 
     @Override

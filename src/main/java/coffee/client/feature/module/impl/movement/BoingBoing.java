@@ -18,7 +18,7 @@ public class BoingBoing extends Module {
     public boolean bounceBack = false;
 
     public BoingBoing() {
-        super("BoingBoing", "Makes every block a slime block", ModuleType.MOVEMENT);
+        super("BoingBoing", "使每个块都成为粘液块", ModuleType.MOVEMENT);
     }
 
     @Override

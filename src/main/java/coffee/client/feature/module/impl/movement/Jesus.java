@@ -26,7 +26,7 @@ public class Jesus extends Module {
         .get());
 
     public Jesus() {
-        super("Jesus", "Allows you to walk on water", ModuleType.MOVEMENT);
+        super("Jesus", "允许你在水上行走", ModuleType.MOVEMENT);
         velStrength.showIf(() -> mode.getValue() == Mode.Velocity);
     }
 

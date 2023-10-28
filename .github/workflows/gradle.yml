@@ -1,19 +1,14 @@
 name: Automate Gradlew Build
-
 on:
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
 permissions:
   contents: read
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Setup Action
         uses: actions/checkout@v3
@@ -23,18 +18,18 @@ jobs:
         with:
           java-version: "17"
           distribution: "adopt"
-
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
-
       - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
+        run: chmod +x ./gradlew
       - name: Execute Gradle build
-        run: ./gradlew build
-
-      - name: Upload build
-        uses: actions/upload-artifact@v3
+        run: ./gradlew build --no-daemon
+      - name: 自动释放
+        uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
-          name: latest-dev
-          path: build/libs/*
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "Latest-1.19.4"
+          prerelease: false
+          title: "1.2.1"
+          files: |
+            build/libs/*

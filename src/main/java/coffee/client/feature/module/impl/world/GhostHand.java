@@ -18,7 +18,7 @@ import java.util.Set;
 public class GhostHand extends Module {
     private final Set<BlockPos> posList = new ObjectOpenHashSet<>();
     public GhostHand() {
-        super("GhostHand", "Open containers through walls", ModuleType.WORLD);
+        super("GhostHand", "穿过墙壁打开容器", ModuleType.WORLD);
     }
 
     @Override

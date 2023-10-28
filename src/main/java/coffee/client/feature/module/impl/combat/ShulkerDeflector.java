@@ -17,11 +17,11 @@ import java.util.Objects;
 
 public class ShulkerDeflector extends Module {
     final BooleanSetting checkOwner = this.config.create(new BooleanSetting.Builder(true).name("Check owner")
-        .description("Check if you own the projectile, else hit it")
+        .description("检查你是否拥有投射物,否则击中它")
         .get());
 
     public ShulkerDeflector() {
-        super("ShulkerDeflector", "Automatically reflects shulker's projectiles", ModuleType.COMBAT);
+        super("ShulkerDeflector", "自动反射舒克的投射物", ModuleType.COMBAT);
     }
 
     @Override

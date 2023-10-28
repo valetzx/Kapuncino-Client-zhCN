@@ -7,10 +7,10 @@ import coffee.client.feature.module.impl.movement.Flight;
 import net.minecraft.client.util.math.MatrixStack;
 
 public class TitleScreen extends Module {
-    final EnumSetting<TitleScreen.Spicy> mode = this.config.create(new EnumSetting.Builder<>(Spicy.SFW).name("Mode").description("Spicy yes or no").get());
+    final EnumSetting<TitleScreen.Spicy> mode = this.config.create(new EnumSetting.Builder<>(Spicy.SFW).name("Mode").description("辣是或不是").get());
 
     public TitleScreen() {
-        super("TitleScreen", "Settings for titlescreen", ModuleType.RENDER);
+        super("TitleScreen", "标题屏幕的设置", ModuleType.RENDER);
     }
 
     @Override

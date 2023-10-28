@@ -20,14 +20,14 @@ import java.util.Objects;
 public class Zoom extends Module {
 
     static long enabledTime = 0;
-    final DoubleSetting finalFov = this.config.create(new DoubleSetting.Builder(30).name("FOV").description("How far to zoom in").min(1).max(180).precision(0).get());
-    final BooleanSetting hold = this.config.create(new BooleanSetting.Builder(true).name("Hold").description("Disables the module when you unpress the keybind").get());
+    final DoubleSetting finalFov = this.config.create(new DoubleSetting.Builder(30).name("FOV").description("放大到什么程度").min(1).max(180).precision(0).get());
+    final BooleanSetting hold = this.config.create(new BooleanSetting.Builder(true).name("Hold").description("当你脱下键盘锁时禁用了该模块").get());
 
     Keybind kb;
     double msens = 0.5d;
 
     public Zoom() {
-        super("Zoom", "Imitates the spyglass with more options", ModuleType.RENDER);
+        super("Zoom", "模仿有更多选项的望远镜", ModuleType.RENDER);
     }
 
     static double easeOutBounce(double x) {

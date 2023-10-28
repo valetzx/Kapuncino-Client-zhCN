@@ -28,11 +28,11 @@ public class ClickTP extends Module {
     Vec3d movings = new Vec3d(0,0,0);
 
     private static BlockPos targeted = new BlockPos(0, 0, 0);
-    final EnumSetting<Mode> mode = this.config.create(new EnumSetting.Builder<>(Mode.Normal).name("Mode").description("The way to teleport").get());
-    final BooleanSetting onlyctrl = this.config.create(new BooleanSetting.Builder(false).name("Only Ctrl").description("Only teleport when the control key is pressed").get());
+    final EnumSetting<Mode> mode = this.config.create(new EnumSetting.Builder<>(Mode.Normal).name("Mode").description("瞬间移动的方法").get());
+    final BooleanSetting onlyctrl = this.config.create(new BooleanSetting.Builder(false).name("Only Ctrl").description("仅在按下控制键时传送").get());
 
     public ClickTP() {
-        super("ClickTP", "Teleport somewhere you clicked to", ModuleType.MOVEMENT);
+        super("ClickTP", "传送到你点击的地方", ModuleType.MOVEMENT);
         //        Events.registerEventHandlerClass(this);
     }
 

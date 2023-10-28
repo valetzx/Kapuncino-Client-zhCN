@@ -13,16 +13,16 @@ import net.minecraft.client.util.math.MatrixStack;
 
 public class AutoRun extends Module {
 
-    final StringSetting commands = this.config.create(new StringSetting.Builder("/say real;/say hacked").name("Commands").description("commands to run when opped, ; separated").get());
+    final StringSetting commands = this.config.create(new StringSetting.Builder("/say real;/say hacked").name("Commands").description("操作时运行的命令;分开的").get());
 
     public AutoRun() {
-        super("AutoRun", "Automatically runs a series of commands when you get op", ModuleType.GRIEF);
+        super("AutoRun", "当你得到op时自动运行一系列命令", ModuleType.GRIEF);
     }
 
     @Override
     public void tick() {
         if (CoffeeMain.client.player.hasPermissionLevel(4)) {
-            Utils.Logging.message("You were opped, running commands");
+            Utils.Logging.message("你被禁止运行命令");
             String[] command = commands.getValue().split(";");
             for (String cmd : command) {
                 CoffeeMain.client.player.networkHandler.sendCommand(cmd.substring(1));

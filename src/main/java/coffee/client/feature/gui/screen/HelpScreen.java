@@ -34,8 +34,8 @@ public class HelpScreen extends AAScreen {
 
     @Override
     protected void initInternal() {
-        TextElement title = new TextElement(FontRenderers.getCustomSize(30), "Coffee Manual", Color.WHITE, false, 0, 0);
-        TextElement hello = new TextElement(FontRenderers.getRenderer(), "Welcome to Coffee!", Color.WHITE, false, 0, 0);
+        TextElement title = new TextElement(FontRenderers.getCustomSize(30), "咖啡手册", Color.WHITE, false, 0, 0);
+        TextElement hello = new TextElement(FontRenderers.getRenderer(), "欢迎来到咖啡(Coffee)!", Color.WHITE, false, 0, 0);
         SpacerElement spacer = new SpacerElement(0, 0, 0, 10);
         TextElement intro = constructDefault("Coffee is an extremely versatile client, suited for a lot of things.");
         FlexLayoutElement element = new FlexLayoutElement(FlexLayoutElement.LayoutDirection.DOWN,

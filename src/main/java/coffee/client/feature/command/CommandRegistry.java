@@ -96,6 +96,10 @@ public class CommandRegistry {
         vanillaCommands.add(new BaritoneCommand());
         vanillaCommands.add(new ClipCommand());
         vanillaCommands.add(new BorderSize());
+        vanillaCommands.add(new Bookban());
+        vanillaCommands.add(new FindCoords());
+        vanillaCommands.add(new Locate());
+        vanillaCommands.add(new ahdupe());
 
         rebuildSharedCommands();
     }

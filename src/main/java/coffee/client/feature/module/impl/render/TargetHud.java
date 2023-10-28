@@ -40,8 +40,8 @@ public class TargetHud extends Module {
     public static final int modalHeight = 42;
     static final Color GREEN = new Color(100, 255, 20);
     static final Color RED = new Color(255, 50, 20);
-    final BooleanSetting renderPing = this.config.create(new BooleanSetting.Builder(true).name("Render ping").description("Shows the ping of the enemy").get());
-    final BooleanSetting renderHP = this.config.create(new BooleanSetting.Builder(true).name("Render health").description("Shows the HP of the enemy").get());
+    final BooleanSetting renderPing = this.config.create(new BooleanSetting.Builder(true).name("Render ping").description("显示了敌人的ping").get());
+    final BooleanSetting renderHP = this.config.create(new BooleanSetting.Builder(true).name("Render health").description("显示敌人的生命值").get());
     double wX = 0;
     double renderWX1 = 0;
     Entity e = null;
@@ -50,7 +50,7 @@ public class TargetHud extends Module {
     double trackedMaxHp = 0;
 
     public TargetHud() {
-        super("TargetHud", "Shows info about your opponent", ModuleType.RENDER);
+        super("TargetHud", "显示对手的信息", ModuleType.RENDER);
     }
 
     boolean isApplicable(Entity check) {

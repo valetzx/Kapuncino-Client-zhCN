@@ -15,7 +15,7 @@ public class Slippy extends Module {
     public double slipperiness = .8;
 
     public Slippy() {
-        super("Slippy", "Makes every block slippy like ice", ModuleType.MOVEMENT);
+        super("Slippy", "让每块石头都像冰一样滑", ModuleType.MOVEMENT);
     }
 
     @Override

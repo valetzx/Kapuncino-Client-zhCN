@@ -31,7 +31,7 @@ public class TabGui extends Module {
     final Stack<TabPane> tabStack = new Stack<>();
 
     public TabGui() {
-        super("TabGui", "Renders a small module manager top left", ModuleType.RENDER);
+        super("TabGui", "在左上角呈现一个小模块管理器", ModuleType.RENDER);
     }
 
     @Override

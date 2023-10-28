@@ -33,7 +33,7 @@ public class MultiShot extends Module {
     final DoubleSetting slider = this.config.create(new DoubleSetting.Builder(1).min(1).max(20).name("Amount").description("Amount of shot").get());
 
     public MultiShot() {
-        super("Multishot", "shoot multiple", ModuleType.GRIEF);
+        super("Multishot", "拍摄倍数", ModuleType.GRIEF);
     }
 
     @Override

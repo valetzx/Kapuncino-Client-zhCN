@@ -23,7 +23,7 @@ import java.util.stream.StreamSupport;
 
 public class AntiAnvil extends Module {
     public AntiAnvil() {
-        super("AntiAnvil", "Prevents you from getting anvil damage", ModuleType.MOVEMENT);
+        super("AntiAnvil", "防止您受到砧座损伤", ModuleType.MOVEMENT);
     }
 
     @Override

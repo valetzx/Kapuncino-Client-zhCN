@@ -18,13 +18,13 @@ import net.minecraft.network.packet.s2c.play.EntityVelocityUpdateS2CPacket;
 public class Velocity extends Module {
 
     final DoubleSetting multiplierX = this.config.create(new DoubleSetting.Builder(0.2).name("Horizontal velocity")
-        .description("How much to multiply X and Z velocity by")
+        .description("X和Z速度乘以多少")
         .min(-2.5)
         .max(2.5)
         .precision(1)
         .get());
     final DoubleSetting multiplierY = this.config.create(new DoubleSetting.Builder(0.2).name("Vertical velocity")
-        .description("How much to multiply Y velocity by")
+        .description("Y速度乘以多少")
         .min(-2.5)
         .max(2.5)
         .precision(1)
@@ -32,7 +32,7 @@ public class Velocity extends Module {
     final EnumSetting<Mode> mode = this.config.create(new EnumSetting.Builder<>(Mode.Modify).name("Mode").description("How to modify velocity").get());
 
     public Velocity() {
-        super("Velocity", "Modifies all incoming velocity updates", ModuleType.COMBAT);
+        super("Velocity", "修改所有传入的velocity更新", ModuleType.COMBAT);
         multiplierX.showIf(() -> mode.getValue() == Mode.Modify);
         multiplierY.showIf(() -> mode.getValue() == Mode.Modify);
     }

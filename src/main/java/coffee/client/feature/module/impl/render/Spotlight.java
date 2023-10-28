@@ -14,7 +14,7 @@ import net.minecraft.client.util.math.MatrixStack;
 @NoNotificationDefault
 public class Spotlight extends Module {
     public Spotlight() {
-        super("Spotlight", "Opens the spotlight menu", ModuleType.RENDER);
+        super("Spotlight", "打开聚光灯菜单", ModuleType.RENDER);
     }
 
     @Override

@@ -22,14 +22,14 @@ import java.util.Objects;
 
 public class FireballDeflector extends Module {
     final EnumSetting<Mode> mode = this.config.create(new EnumSetting.Builder<>(Mode.DeflectSomewhere).name("Mode")
-        .description("How to change the fireball's motion (ReflectBack = reflect back at shooter, DeflectSomewhere = idc get it away)")
+        .description("如何改变火球的运动(ReflectBack = 反射回射手,DeflectSomewhere = id把它弄走)")
         .get());
     final BooleanSetting checkVel = this.config.create(new BooleanSetting.Builder(false).name("Check velocity")
-        .description("Checks if the fireball is actually approaching before hitting. Can get funky with a lot of them")
+        .description("在击中之前检查火球是否正在靠近.对很多人来说会变得很古怪")
         .get());
 
     public FireballDeflector() {
-        super("FireballDeflector", "Deflects (or reflects) fireballs in your hit range", ModuleType.COMBAT);
+        super("FireballDeflector", "偏转(或反射)你命中范围内的火球", ModuleType.COMBAT);
     }
 
     boolean isApproaching(Vec3d checkAgainst, Vec3d checkPos, Vec3d checkVel) {
